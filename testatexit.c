@@ -9,6 +9,11 @@ void cleanup() {
 int main (int argc, char **argv) 
 {
     atexit(cleanup);
+
+    if (argc == 3) {
+        printf("AAAAH!\n");
+        abort();
+    }
     
     if (argc != 2)
     {
